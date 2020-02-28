@@ -1,0 +1,72 @@
+breakpoint  {
+    max-width: 100%;
+    display: inline-block;
+    }
+    /* 2 columnas para tablets */
+    @media (min-width: 420px) {
+    breakpoint  {
+    max-width: 48%;
+    }
+    }
+    /* 4 columnas para grandes dispositivos*/
+    @media (min-width: 760px) {
+    breakpoint  {
+    max-width: 24%;
+    }
+    }
+
+    div.logo-container {
+        background-color: white;
+        text-align: center;
+        text-align: center;
+    }
+
+    a.navbar-brand {
+        text-align: justify;
+        font-size: 78px;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    div.scrollmenu {
+        background-color: lightblue;
+        overflow: auto;
+        white-space: nowrap;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 50px;
+      }
+      
+      div.scrollmenu a {
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 30px;
+        text-decoration: none;
+      }
+      
+      div.scrollmenu a:hover {
+        background-color: rgb(252, 116, 38);
+      }
+
+      body{
+          background-color: cadetblue;
+
+      }
+
+      .background-image { 
+        position: relative; 
+        width: 100%; 
+     }
+     
+     body.a { 
+        position: absolute; 
+        top: 200px; 
+        left: 0; 
+        width: 100%; 
+        size: 100px;
+        color: ivory;
+        font: bold 24px/45px Helvetica, Sans-Serif; 
+        letter-spacing: -1px; 
+     }
+
