@@ -8,40 +8,40 @@ breakpoint  {
     max-width: 48%;
     }
     }
-    /* 4 columnas para grandes dispositivos*/
-    @media (min-width: 760px) {
-    breakpoint  {
-    max-width: 24%;
-    }
+    @media (min-width: 40.5em) {
+      .related-products li {
+        width: 16.6666667%;
+      }
     }
 
     div.logo-container {
         background-color: white;
         text-align: center;
-        text-align: center;
+        justify-content: center;
+        padding: 15px;
     }
 
     a.navbar-brand {
         text-align: justify;
-        font-size: 78px;
+        font-size: 50px;
         color: black;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     div.scrollmenu {
-        background-color: lightblue;
+        background-color: lightcyan;
         overflow: auto;
         white-space: nowrap;
         text-align: center;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
       }
       
       div.scrollmenu a {
         display: inline-block;
         color: black;
         text-align: center;
-        padding: 30px;
+        font-style: normal;
+        padding: 25px;
         text-decoration: none;
       }
       
@@ -50,23 +50,29 @@ breakpoint  {
       }
 
       body{
-          background-color: cadetblue;
+          background-color: lightcyan;
 
       }
 
-      .background-image { 
-        position: relative; 
-        width: 100%; 
-     }
-     
-     body.a { 
-        position: absolute; 
-        top: 200px; 
-        left: 0; 
-        width: 100%; 
-        size: 100px;
+      .banner {
+        background: url(../images/backgroundimage2.jpg) no-repeat center;
+        background-attachment: fixed;
+        height: calc(100vh - 50px);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white
+        text-align: center;
+      }
+      
+      h1.title {
+        font-size: 5rem;
+        margin-bottom: 0;
         color: ivory;
-        font: bold 24px/45px Helvetica, Sans-Serif; 
-        letter-spacing: -1px; 
-     }
+        font-family: Arial, Helvetica, sans-serif;
 
+        main.articles1 {
+          text-align: center;
+        }
