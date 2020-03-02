@@ -231,5 +231,17 @@ background-color: lightcyan;
     border: 0px;
 }
 
+label {
+    display: block;
+    font: 1rem 'Montserrat';
+    font-style: normal;
+    color: black;
+
+}
+
+input label {
+    margin: .4rem 0;
+    background-color: cornflowerblue;
+}
 
   
