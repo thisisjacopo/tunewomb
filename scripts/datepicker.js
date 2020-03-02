@@ -1,9 +1,9 @@
 'use strict';
 
 
-('.datepicker').datepicker({
+$('.datepicker').datepicker({
     format: 'mm/dd/yyyy',
     startDate: '-3d'
 });
 
-('.datepicker').datepicker();
+$('.datepicker').datepicker();
