@@ -3,7 +3,7 @@ let firstName = document.getElementById("first_name");
 let lastName = document.getElementById("last_name");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
-let confirmPassword = document.getElementById("repeat-password");
+let repeatPassword = document.getElementById("repeat-password");
 
 let signupButton = document.getElementById("signup-button");
 let loginButton = document.getElementsByClassName("login-button");
@@ -27,7 +27,7 @@ function checkValidUser() {
     } else if(!signupValidatorNew.checkPassword()){
         signupValidatorNew.errorCreator("Please try insert your password again", password)
         validUser=false
-    } else if(!signupValidatorNew.checkRepeatPassword()){
+    } else if(!signupValidatorNew.checkRepeatPassword(repeatPassword)){
         signupValidatorNew.errorCreator("Your passwords don´t match", repeatPassword)
         validUser=false
     } else {

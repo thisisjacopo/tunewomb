@@ -7,17 +7,19 @@ class Validator {
     }
 
     checkPassword(){
+        console.log('password', this.password)
         if(!this.password){
             return false
-        } else if(this.password.lenght < 6) {
+        } else if(this.password.length < 6) {
             return false
         } else {
             return true
         }
     }
 
-    checkRepeatPassword(){
-        if (this.password !== this.password){
+    checkRepeatPassword(confirmPassword){
+        console.log('check', this.password, confirmPassword)
+        if (this.password !== confirmPassword){
             return false
         }
          else {
