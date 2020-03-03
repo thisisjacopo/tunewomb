@@ -1,5 +1,4 @@
 //'use strict'
-console.log('otracosa')
 class Validator {
     constructor(email, password){
         this.email = email;
@@ -18,7 +17,7 @@ class Validator {
     }
 
     checkRepeatPassword(confirmPassword){
-        console.log('check', this.password, confirmPassword)
+        console.log(confirmPassword)
         if (this.password !== confirmPassword){
             return false
         }
@@ -86,7 +85,7 @@ class signupValidator extends Validator {
     }
 }
 
-class LogInValidator extends signupValidator {
+class LogInValidator extends Validator {
     constructor (email, password){
         super(email, password)
     }

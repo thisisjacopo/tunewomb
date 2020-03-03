@@ -6,7 +6,7 @@ let password = document.getElementById("password");
 let repeatPassword = document.getElementById("repeat-password");
 
 let signupButton = document.getElementById("signup-button");
-let loginButton = document.getElementsByClassName("login-button");
+let loginButton = document.getElementById("login-button");
 let form = document.getElementsByClassName("signup-form")[0];
 let formFrame = document.getElementsByClassName("container-signup")[0];
 let usersDB = JSON.parse(localStorage.getItem('users'))
@@ -27,7 +27,7 @@ function checkValidUser() {
     } else if(!signupValidatorNew.checkPassword()){
         signupValidatorNew.errorCreator("Please try insert your password again", password)
         validUser=false
-    } else if(!signupValidatorNew.checkRepeatPassword(repeatPassword)){
+    } else if(!signupValidatorNew.checkRepeatPassword(repeatPassword.value)){
         signupValidatorNew.errorCreator("Your passwords don´t match", repeatPassword)
         validUser=false
     } else {
@@ -74,6 +74,18 @@ signupButton.addEventListener('click', function (event) {
 
     if (checkValidUser()) {
         console.log('User registered correctly.')
-        createUser(firstName.value, lastName.value, email.value, password.value, confirmPassword.value)
+        createUser(firstName.value, lastName.value, email.value, password.value, repeatPassword.value)
+    };
+});
+
+loginButton.addEventListener('click', function (event) {
+    //console.log('submitted')
+
+    event.preventDefault();
+          deleteErrors();
+
+    if (checkValidUser()) {
+        sersDB(email.value, password.value)
+        console.log('Welcome back.')
     };
 });
