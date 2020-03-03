@@ -53,19 +53,6 @@ function createUser(firstName, lastName, email, password) {
     localStorage.setItem('users', JSON.stringify(usersDB));
 }
 
-/*
-function createUser (name, email, password) {
-    const newUser = new User (name, email, password)
-
-    if (usersDB){
-        usersDB.push(newUser);
-    } else {
-        usersDB = [newUser]
-    }
-    localStorage.setItem('users', JSON.stringify(usersDB));
-} 
-*/
-
 signupButton.addEventListener('click', function (event) {
     //console.log('submitted')
 
@@ -78,14 +65,3 @@ signupButton.addEventListener('click', function (event) {
     };
 });
 
-loginButton.addEventListener('click', function (event) {
-    //console.log('submitted')
-
-    event.preventDefault();
-          deleteErrors();
-
-    if (checkValidUser()) {
-        sersDB(email.value, password.value)
-        console.log('Welcome back.')
-    };
-});
