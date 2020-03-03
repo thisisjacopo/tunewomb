@@ -1,10 +1,11 @@
 //'use strict'
-
+console.log('otracosa')
 class Validator {
     constructor(email, password){
         this.email = email;
         this.password = password;
     }
+
     checkPassword(){
         if(!this.password){
             return false
@@ -14,74 +15,91 @@ class Validator {
             return true
         }
     }
-    checkEmail(email, verifyEmail) {
+
+    checkRepeatPassword(){
+        if (this.password !== this.password){
+            return false
+        }
+         else {
+            return true
+        }
+    }
+
+    checkEmail() {
         let emailCheck = RegExp("[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}")
-        if (email === verifyEmail && emailCheck.test(email)) {
+        if (!emailCheck.test(this.email)) {
             return false
         }
         return true
     }
 
+    errorCreator (message, location) {
+        let div = document.createElement("div")
+        div.setAttribute("class", "error")
+        div.innerHTML = message
+        form.insertBefore(div, location)
+    }
+
+    deleteErrors (){
+        let errors = [...document.getElementsByClassName("error")]
+        errors ? errors.forEach(error => error.remove()) : null;
+    }
+
 }
 
 
-
-/*class signupValidator extends Validator {
-    constructor (firstName, lastName, email, password) {
-  super (email, password)
-    this.email = email
-    this.password = password
+class User {
+    constructor(firstName,lastName, email, password){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
     }
-}*/
+  }
 
 
-
-class SignUpValidator extends Validator {
-    constructor (email, password, repeatPassword){
-        super(email, password);
-        this.repeatPassword = repeatPassword
+class signupValidator extends Validator {
+  constructor (firstName, lastName, email, password) {
+  super (email, password)
+    this.firstName = firstName
+    this.lastName = lastName
     }
 
     checkEmailInDB (usersDB){
-        let userExists = false;
+        console.log('usersDB', usersDB)
+        let answer = true;
 
         if (!usersDB){
             return true;
         }
         else{
             usersDB.forEach(user => {
-                if (user.email === this.email){
-                    userExists=false
+                console.log(user.email, this.email)
+                if (user.email === this.email){ 
+                    answer=false
                 }
             })
         }
-        return userExists;
-    }
-
-    checkRepeatPassword () {
-        if(this.password === this.repeatPassword) {
-            return true;
-        } else {
-            return false;
-        } 
+        return answer;
     }
 }
 
-class LogInValidator extends Validator {
-    constructor (){
-        super();
+class LogInValidator extends signupValidator {
+    constructor (email, password){
+        super(email, password)
     }
 
     checkEmailInDB (string){
-        if (!userDB){
+        console.log('checking email')
+        if (!userDB) {
             return false
-        }
-        else{
+        } else {
             userDB.forEach(user => {
-                if (user.email === string){return true}
+                if (user.email === string){
+                    return true
+                }
             })
         }
         return false
-    }
-
+}
 }
