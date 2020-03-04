@@ -1,5 +1,5 @@
-let firstName = document.getElementById("first_name");
-let lastName = document.getElementById("last_name");
+//let firstName = document.getElementById("first_name");
+//let lastName = document.getElementById("last_name");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let repeatPassword = document.getElementById("repeat-password");
@@ -9,8 +9,6 @@ let loginButton = document.getElementById("login-button");
 let form = document.getElementsByClassName("signup-form")[0];
 let formFrame = document.getElementsByClassName("container-signup")[0];
 let usersDB = JSON.parse(localStorage.getItem('users'))
-
-console.log(email, password)
 
 loginButton.addEventListener('click', function (event) {
     console.log('submitted')
