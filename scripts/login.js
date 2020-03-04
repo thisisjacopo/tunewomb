@@ -10,8 +10,10 @@ let form = document.getElementsByClassName("signup-form")[0];
 let formFrame = document.getElementsByClassName("container-signup")[0];
 let usersDB = JSON.parse(localStorage.getItem('users'))
 
+console.log(email, password)
 
 loginButton.addEventListener('click', function (event) {
+
     console.log('submitted')
 
     event.preventDefault();
@@ -21,15 +23,13 @@ loginButton.addEventListener('click', function (event) {
 
 function checkLogUser(){
     usersDB.forEach(User => {
-        if ((User.email.value === email.value) && 
-        (User.password.value === password.value)) {
+        if ((User.email === email.value) && 
+        (User.password === password.value)) {
             console.log('Welcome back!')
         }
-        localStorage.setItem('users', JSON.stringify(user))
+        localStorage.setItem('users', JSON.stringify(User))
     }
 )}
-
-
 
 function deleteErrors() {
     let errors = [...document.getElementsByClassName("error")]
