@@ -13,13 +13,17 @@ let lastNum = ""
 let birth = getDate()
 
 
-birth.forEach(e => {
+/*getDate.forEach(e => {
     console.log(e[e.length-1])
     lastNum+=(e[e.length-1])
-})
+})*/
 
-function getNum(){
-    return lastNum
+function getNum(){      
+    birth.forEach(e => {
+        console.log(e[e.length-1])       
+        lastNum+=(e[e.length-1])
+    })
+    return lastNum                      //SHOULD RETURN THE LAST 3 NUMBERS OF EACH INPUT IN THE CALENDAR
 }
 
 
@@ -33,7 +37,7 @@ function submitDate(){
 discoverButton.addEventListener('click', function (event) {
     console.log('submitted')
 
-    event.submitDate()
+    event.submitDate()  // SHOULD PASS THE VALUE TO THE FETCH ADDRESS
     });
 
 // CALL TO API
