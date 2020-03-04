@@ -1,4 +1,3 @@
-//'use strict'
 class Validator {
     constructor(email, password){
         this.email = email;
@@ -74,9 +73,10 @@ class signupValidator extends Validator {
             return true;
         }
         else{
-            usersDB.forEach(user => {
-                console.log(user.email, this.email)
-                if (user.email === this.email){ 
+            console.log(usersDB)
+           usersDB.forEach(User => {
+                console.log(User.email, this.email)
+                if (User.email === this.email){ 
                     answer=false
                 }
             })
@@ -95,8 +95,8 @@ class LogInValidator extends Validator {
         if (!userDB) {
             return false
         } else {
-            userDB.forEach(user => {
-                if (user.email === string){
+            userDB.forEach(User => {
+                if (User.email === string){
                     return true
                 }
             })

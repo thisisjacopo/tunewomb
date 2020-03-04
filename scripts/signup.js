@@ -1,4 +1,3 @@
-//console.log('signup')
 let firstName = document.getElementById("first_name");
 let lastName = document.getElementById("last_name");
 let email = document.getElementById("email");
@@ -12,27 +11,27 @@ let formFrame = document.getElementsByClassName("container-signup")[0];
 let usersDB = JSON.parse(localStorage.getItem('users'))
 
 function checkValidUser() {
-    //console.log(firstName.value, lastName.value, email.value, password.value);
     let signupValidatorNew = new signupValidator(firstName.value, lastName.value, email.value, password.value)
     let usersDB = JSON.parse(localStorage.getItem('users'));
     let validUser = true;
-
-    if(!signupValidatorNew.checkEmail()){
+    if (!signupValidatorNew.checkEmail()) {
         signupValidatorNew.errorCreator("Please insert a valid email", email)
-        validUser=false
-    } else if (!signupValidatorNew.checkEmailInDB(usersDB)){
-        //console.log('check email in db');
+        validUser = false
+    } else if (!signupValidatorNew.checkEmailInDB(usersDB)) {
         signupValidatorNew.errorCreator("This email is already been registered with us", email)
-        validUser=false
-    } else if(!signupValidatorNew.checkPassword()){
+        validUser = false
+    } else if (!signupValidatorNew.checkPassword()) {
         signupValidatorNew.errorCreator("Please try insert your password again", password)
-        validUser=false
-    } else if(!signupValidatorNew.checkRepeatPassword(repeatPassword.value)){
+        validUser = false
+    } else if (!signupValidatorNew.checkRepeatPassword(repeatPassword.value)) {
         signupValidatorNew.errorCreator("Your passwords don´t match", repeatPassword)
-        validUser=false
+        validUser = false
     } else {
+
+
+    }
+
     return validUser
-}
 }
 
 function deleteErrors() {
@@ -44,24 +43,28 @@ deleteErrors()
 
 function createUser(firstName, lastName, email, password) {
     const newUser = new User(firstName, lastName, email, password)
+    let bddlocal = []
+    if (usersDB !== null) {
+        usersDB.forEach(element => {
+                bddlocal.push(element)
+            }  
+        )}
 
-    if (usersDB) {
-        usersDB.push(newUser);
-    } else {
-        usersDB = [newUser]
+
+        bddlocal.push(newUser);
+        console.log(bddlocal)
+        localStorage.setItem('users', JSON.stringify(bddlocal));
+
+        window.location.href = "../welcomeback.html"
     }
-    localStorage.setItem('users', JSON.stringify(usersDB));
-}
 
-signupButton.addEventListener('click', function (event) {
-    //console.log('submitted')
+    signupButton.addEventListener('click', function (event) {
+        event.preventDefault();
+              deleteErrors();
 
-    event.preventDefault();
-          deleteErrors();
+        if (checkValidUser()) {
 
-    if (checkValidUser()) {
-        console.log('User registered correctly.')
-        createUser(firstName.value, lastName.value, email.value, password.value, repeatPassword.value)
-    };
-});
-
+            console.log('User registered correctly.')
+            createUser(firstName.value, lastName.value, email.value, password.value, repeatPassword.value)
+        };
+    });

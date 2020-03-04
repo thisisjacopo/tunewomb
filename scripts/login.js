@@ -13,7 +13,6 @@ let usersDB = JSON.parse(localStorage.getItem('users'))
 console.log(email, password)
 
 loginButton.addEventListener('click', function (event) {
-
     console.log('submitted')
 
     event.preventDefault();
@@ -21,13 +20,15 @@ loginButton.addEventListener('click', function (event) {
           checkLogUser();
     });
 
-function checkLogUser(){
-    usersDB.forEach(User => {
-        if ((User.email === email.value) && 
-        (User.password === password.value)) {
-            console.log('Welcome back!')
-        }
-        localStorage.setItem('users', JSON.stringify(User))
+function checkLogUser(){console.log(usersDB)
+        usersDB.forEach(User => {
+            console.log(User)
+            if ((User.email === email.value) && 
+            (User.password === password.value)) {
+                console.log('Welcome back!')
+            }
+
+        window.location.href="../welcomeback.html"
     }
 )}
 
