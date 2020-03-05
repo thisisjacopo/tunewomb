@@ -25,6 +25,8 @@ breakpoint {
 }
 
 .logo-container {
+    font-family: 'Montserrat';
+    font-style: normal;
     text-align: center;
     justify-content: center;
     font-size: 30px;
@@ -57,6 +59,8 @@ div.scrollmenu {
 }
 
 div.scrollmenu a{
+    font-family: 'Montserrat';
+    font-style: normal;
     display: inline-block;
     color: black;
     text-align: center;
@@ -67,10 +71,14 @@ div.scrollmenu a{
 
 div.scrollmenu a:hover {
     background-color: cadetblue;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .body {
     background-color: lightcyan;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .banner {
@@ -84,6 +92,8 @@ div.scrollmenu a:hover {
     flex-direction: column;
     color: whitesmoke;
     text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .banner-discovery {
@@ -97,6 +107,9 @@ div.scrollmenu a:hover {
     flex-direction: column;
     color: whitesmoke;
     text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    scroll-behavior: unset;
 }
 
 .banner-signup {
@@ -110,6 +123,8 @@ div.scrollmenu a:hover {
     flex-direction: column;
     color: whitesmoke;
     text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .banner-login {
@@ -123,6 +138,8 @@ div.scrollmenu a:hover {
     flex-direction: column;
     color: whitesmoke;
     text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .logo-container {
@@ -131,6 +148,8 @@ div.scrollmenu a:hover {
     margin: 15px auto;
     padding: 15px;
     color: whitesmoke;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .section_header {
@@ -139,6 +158,8 @@ div.scrollmenu a:hover {
 
 .page-footer {
 background-color: lightcyan;
+font-family: 'Montserrat';
+font-style: normal;
 }
 
 .page-footer a{
@@ -181,6 +202,7 @@ background-color: lightcyan;
     margin-bottom: 5px;
     background-color: darkslategrey;
     font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .form {
@@ -188,19 +210,25 @@ background-color: lightcyan;
     display: inline;
     justify-content: center;
     text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .row {
     width: 100%;
     justify-content: center;
     text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .btn-info {
-    color: #fff;
+    color: whitesmoke;
     background-color: #61e0f3;
     border-color: #61e0f3;
     text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .limiter{
@@ -221,15 +249,7 @@ background-color: lightcyan;
     font-style: normal;
 }
 
-.input100 {
-    background-color: whitesmoke;
-    color: darkgray;
-    font-size: 25px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    border-color: transparent;
-    border: 0px;
-}
+
 
 label {
     display: block;
@@ -244,4 +264,94 @@ input label {
     background-color: cornflowerblue;
 }
 
-  
+.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: lightcyan;
+    color: black;
+    text-align: center;
+    border: 10px slategray;
+    border-radius: 10px;
+    background;
+}
+
+.card p {
+    font-size: 15px;
+    font-style: italic;
+}
+
+.card h6{
+    color: cornflowerblue;
+}
+
+.card-img-top {
+    align-items: center;
+    position: relative;
+    height: 320px;
+    display: flex;
+  }
+
+
+
+.input100 {
+    background-color: transparent;
+    color: whitesmoke;
+    border: 3px;
+    border-bottom: 5px;
+    border-color: black;
+}
+
+.login100 {
+    color: whitesmoke;
+}
+
+.input100::placeholder{
+    color: whitesmoke;
+}
+
+.centered-form .panel {
+    background: transparent;
+    size: 150px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: whitesmoke;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    background-color: transparent;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+input::placeholder {
+    color: whitesmoke;
+    font-family: 'Montserrat';
+    font-style: normal;
+    text-align: center;
+}
+
+.signup-form button{
+    background-color: transparent;
+    color: whitesmoke;
+    font-family: 'Montserrat';
+    font-style: normal;
+}

@@ -51,28 +51,16 @@ function getData(num){
         let wrapper = document.getElementById('wrapper-artista')
         let card = document.createElement('div')
         card.innerHTML=`<div class="card">
-        <img class="card-img-top" src=${data.picture_small} alt="Card image cap">
+        <img class="card-img-top" src=${data.picture_big} alt="Card image cap">
         <div class="card-body">
          <h2>${data.name}</h2>
-          <h5>${data.tracklist}</h5>
-          <p class="card-text">All of the must have if you love music and are into tech.</p>
+          <h5 href="${data.tracklist}">${data.tracklist}</h5>
+          <p class="card-text">Follow the link above to discover the artist playlist.</p>
         </div>`
         wrapper.appendChild(card)
     })
     .catch(error => console.log(error))
 
 }
-// function getData(){
-//     let name = 'jacopo'
-//     let wrapper = document.getElementById('wrapper-artista')
-//     let card = document.createElement('div')
-//     card.innerHTML=`<div class="card">
-//     <img class="card-img-top" src="./images/twlogo.png" alt="Card image cap">
-//     <div class="card-body">
-//      <h2>check</h2>
-//       <h5 class="card-title">A guide to tech gadgets for music lover</h5>
-//       <p class="card-text">All of the must have if you love music and are into tech.</p>
-//     </div>`
-//     wrapper.appendChild(card)
-//  }
+
  
