@@ -277,7 +277,7 @@ input label {
     text-align: center;
     border: 10px slategray;
     border-radius: 10px;
-    background;
+    opacity: 90%;
 }
 
 .card p {
@@ -353,4 +353,9 @@ input::placeholder {
     color: whitesmoke;
     font-family: 'Montserrat';
     font-style: normal;
+}
+
+.discover-button{
+    background-color: transparent;
+    color: whitesmoke;
 }
