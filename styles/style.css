@@ -82,7 +82,7 @@ div.scrollmenu a:hover {
 }
 
 .banner {
-    background: url(../images/backgroundimage2.jpg);
+    background: url(../images/background.jpg);
     background-attachment: fixed;
     height: calc(100vh - 50px);
     background-size: cover;
@@ -97,7 +97,7 @@ div.scrollmenu a:hover {
 }
 
 .banner-discovery {
-    background: url(../images/backgroundimage3.jpeg);
+    background: url(../images/background.jpg);
     background-attachment: fixed;
     height: calc(100vh - 50px);
     background-size: cover;
@@ -112,7 +112,7 @@ div.scrollmenu a:hover {
 }
 
 .banner-signup {
-    background: url(../images/backgroundimage1.jpg);
+    background: url(../images/background.jpg);
     background-attachment: fixed;
     height: calc(100vh - 50px);
     background-size: cover;
@@ -127,7 +127,7 @@ div.scrollmenu a:hover {
 }
 
 .banner-login {
-    background: url(../images/backgroundimage.png);
+    background: url(../images/background.jpg);
     background-attachment: fixed;
     height: calc(100vh - 50px);
     background-size: cover;
