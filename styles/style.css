@@ -3,7 +3,7 @@ breakpoint {
     display: inline-block;
 }
 
-@media(min-width: 320px) {
+@media(max-width: 600px) {
     breakpoint {
         max-width: 28%;
         margin-left: 20px;
@@ -82,7 +82,7 @@ div.scrollmenu a:hover {
 }
 
 .banner {
-    background: url(../images/backgroundimage2.jpg);
+    background: url(../images/background.jpeg);
     background-attachment: fixed;
     height: calc(100vh - 50px);
     background-size: cover;
@@ -97,7 +97,7 @@ div.scrollmenu a:hover {
 }
 
 .banner-discovery {
-    background: url(../images/backgroundimage3.jpeg);
+    background: url(../images/background.jpeg);
     background-attachment: fixed;
     height: calc(100vh - 50px);
     background-size: cover;
@@ -112,7 +112,7 @@ div.scrollmenu a:hover {
 }
 
 .banner-signup {
-    background: url(../images/backgroundimage1.jpg);
+    background: url(../images/background.jpeg);
     background-attachment: fixed;
     height: calc(100vh - 50px);
     background-size: cover;
@@ -127,7 +127,7 @@ div.scrollmenu a:hover {
 }
 
 .banner-login {
-    background: url(../images/backgroundimage.png);
+    background: url(../images/background.jpeg);
     background-attachment: fixed;
     height: calc(100vh - 50px);
     background-size: cover;
