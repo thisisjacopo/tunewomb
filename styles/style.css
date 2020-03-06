@@ -1,9 +1,9 @@
-breakpoint {
+.breakpoint {
     max-width: 100%;
     display: inline-block;
 }
 
-@media(min-width: 320px) {
+@media(max-width: 700px) {
     breakpoint {
         max-width: 28%;
         margin-left: 20px;
@@ -277,7 +277,7 @@ input label {
     text-align: center;
     border: 10px slategray;
     border-radius: 10px;
-    opacity: 90%;
+    opacity: 95%;
 }
 
 .card p {
@@ -358,4 +358,12 @@ input::placeholder {
 .discover-button{
     background-color: transparent;
     color: whitesmoke;
+}
+
+.welcomeback-button a{
+ color: whitesmoke;
+}
+
+.welcomeback-button{
+    background-color: transparent;
 }
