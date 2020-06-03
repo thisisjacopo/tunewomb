@@ -1,3 +1,4 @@
+
 let discoverButton = document.getElementById("discover-button");
 let calendar = document.getElementById('set-bday');
 
@@ -16,41 +17,35 @@ function getNum() {
     birth.forEach(e => {
         result += (e[e.length - 1])
     })
-    return result //SHOULD RETURN THE LAST 3 NUMBERS OF EACH INPUT IN THE CALENDAR
+    return result // RETURNS THE LAST 3 NUMBERS OF EACH INPUT IN THE CALENDAR
 }
 
 
 // BUTTON FUNCTIONS
 
-discoverButton.onclick = function () {
+discoverButton.onclick = () => {
     let lastNum = getNum()
-    console.log(lastNum)
     getData(lastNum)
-
 }
 
 
 function submitDate() {
-
     return sendDate
 }
 
-event.submitDate() // SHOULD PASS THE VALUE TO THE FETCH ADDRESS
+event.submitDate() // PASS THE VALUE TO THE FETCH API
 
 // CALL TO API
 
 function getData(num) {
     fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${num}`)
         .then(res => {
-            console.log(res);
             return res.json()
         })
-        .then(json => json)
         .then(data => {
-            console.log(data);
             let wrapper = document.getElementById('wrapper-artista')
             let card = document.createElement('div')
-            card.innerHTML = `<div class="card">
+            card.innerHTML = `<div class="card-result">
                 <img class="card-img-top" src=${data.picture_big} alt="Card image cap">
                 <div class="card-body">
                 <h2>${data.name}</h2>
